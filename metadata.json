@@ -1,0 +1,6 @@
+{
+  "name": "AUTOSCANNERONLINE",
+  "description": "Mapeamento eletrônico completo e diagnóstico avançado em redes multiplexadas CAN Bus com tecnologia de última geração.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
