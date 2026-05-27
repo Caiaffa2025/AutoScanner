@@ -149,7 +149,7 @@ export default function PricingPackages({ onSelectPackage }: PricingPackagesProp
           </p>
           <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-3">
             <a
-              href="https://wa.me/5511984937529?text=Olá!%20Gostaria%20de%20solicitar%20um%20diagnóstico%20automotivo%20em%20domicília."
+              href="https://wa.me/5511984937529?text=Olá!%20Gostaria%20de%20solicitar%20um%20diagnóstico%20automotivo%20em%20domicílio."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20ba5a] text-black font-black uppercase tracking-wider px-5 py-3 text-xs inline-flex items-center justify-center gap-2 transition-all"
@@ -157,7 +157,7 @@ export default function PricingPackages({ onSelectPackage }: PricingPackagesProp
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.45 5.467 0 9.911-4.43 9.914-9.885.002-2.643-1.013-5.129-2.862-6.98C16.47 1.884 13.991.869 11.35.869c-5.476 0-9.92 4.434-9.923 9.893-.001 1.905.513 3.766 1.488 5.412L1.874 22.1l6.002-1.574c1.62.88 3.243 1.328 4.771 1.328zM17.61 14.38c-.29-.145-1.72-.848-1.986-.944-.266-.097-.46-.145-.653.145-.193.29-.747.944-.916 1.139-.17.193-.338.217-.628.072-.29-.145-1.228-.453-2.338-1.444-.864-.772-1.448-1.727-1.618-2.017-.17-.29-.018-.447.127-.59.13-.13.29-.338.435-.507.145-.17.193-.29.29-.483.097-.193.048-.361-.025-.507-.072-.145-.653-1.573-.894-2.152-.236-.569-.475-.49-.652-.49-.17 0-.361-.024-.554-.024s-.506.072-.771.361c-.266.29-1.013.99-1.013 2.415 0 1.425 1.037 2.798 1.182 2.992.145.193 2.037 3.111 4.934 4.362.688.297 1.224.474 1.644.608.692.22 1.322.189 1.821.114.555-.083 1.72-.7 1.961-1.374.24-.674.24-1.253.17-1.374-.073-.12-.266-.193-.555-.338z" />
               </svg>
-              Falar Via WhatsApp: (11) 98493-7529
+              Falar Via WhatsApp: 11 98493 7529
             </a>
             <span className="text-[10px] font-mono text-white/40">ou ligue direto</span>
           </div>

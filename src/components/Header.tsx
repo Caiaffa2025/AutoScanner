@@ -172,7 +172,7 @@ export default function Header({ onNavigate }: HeaderProps) {
                 className="flex items-center justify-center gap-2 py-2.5 text-xs text-white/60 font-mono uppercase hover:text-[#25D366] transition-colors"
               >
                 <span className="text-[#25D366] text-sm">💬</span>
-                WhatsApp: (11) 98493-7529
+                WhatsApp: 11 98493 7529
               </a>
               <button
                 id="mob-cta-agendar"

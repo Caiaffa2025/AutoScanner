@@ -103,20 +103,11 @@ export default function Footer({ onNavigate }: FooterProps) {
                   rel="noopener noreferrer"
                   className="hover:text-white hover:underline decoration-[#25D366]"
                 >
-                  WhatsApp: (11) 98493-7529
+                  WhatsApp: 11 98493 7529
                 </a>
               </li>
-              {/* Optional secondary WA number requested by user as alternative */}
-              <li className="flex items-center gap-2.5">
-                <span className="text-white/40 text-xs shrink-0 font-mono">ou</span>
-                <a
-                  href="https://wa.me/5511084937529?text=Olá!%20Gostaria%20de%20solicitar%20um%20diagnóstico%20automotivo."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white hover:underline text-white/40"
-                >
-                  WhatsApp (alt): (11) 08493-7529
-                </a>
+              <li className="flex items-center gap-2.5 font-mono text-[10px] text-white/40">
+                <span>Disponível todos os dias</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-raven-red shrink-0" />
@@ -129,7 +120,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         {/* Bottom copyright segment */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-white/35 font-mono uppercase font-black tracking-wide">
-          <p>© {new Date().getFullYear()} AUTOSCANNERONLINE. Todos os Direitos Reservados.</p>
+          <p>© 2026 AUTOSCANNERONLINE. Todos os Direitos Reservados.</p>
           <div className="flex items-center gap-1.5 text-[9px] text-white/20">
             <ShieldAlert className="w-3.5 h-3.5 text-raven-red" />
             <span>As marcas e logos das montadoras pertencem aos seus fabricantes.</span>
