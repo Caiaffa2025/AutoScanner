@@ -318,8 +318,8 @@ export default function BookingForm({ preFillData, onBookingSuccess }: BookingFo
                         onChange={handleInputChange}
                         className="w-full bg-black border border-raven-border focus:border-raven-red rounded-none py-3 px-3.5 text-white text-xs font-semibold focus:outline-none transition-colors"
                       >
-                        <option value="preventive">Varredura Preventiva Check-Up (R$ 119)</option>
-                        <option value="complete">Diagnóstico Eletrônico Completo (R$ 199)</option>
+                        <option value="preventive">Varredura Preventiva Câmbio (R$ 119)</option>
+                        <option value="complete">Diagnóstico Eletrônico Avançado (R$ 199)</option>
                       </select>
                     </div>
 
@@ -442,7 +442,7 @@ export default function BookingForm({ preFillData, onBookingSuccess }: BookingFo
                         <div className="flex gap-2 text-white/40">
                           <span>PACOTE:</span>
                           <span className="text-white font-black">
-                            {formData.packageId === "preventive" ? "PREVENTIVA (R$ 119)" : "COMPLETO (R$ 199)"}
+                            {formData.packageId === "preventive" ? "PREVENTIVA CÂMBIO (R$ 119)" : "AVANÇADO CÂMBIO (R$ 199)"}
                           </span>
                         </div>
                         {formData.serviceMode === "home" && (

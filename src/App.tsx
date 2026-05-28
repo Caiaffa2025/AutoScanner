@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import DiagnosticScope from "./components/DiagnosticScope";
 import SymptomChecker from "./components/SymptomChecker";
+import TransmissionTroubleSection from "./components/TransmissionTroubleSection";
 import SupportedBrands from "./components/SupportedBrands";
 import Features from "./components/Features";
 import PricingPackages from "./components/PricingPackages";
@@ -154,6 +155,9 @@ export default function App() {
           onSelectSymptomForScan={handleSymptomSelect}
           onBookNow={() => handleScrollToSection("booking")}
         />
+
+        {/* Common transmission issues & OBD2 diagnostic codes */}
+        <TransmissionTroubleSection onBookNow={() => handleScrollToSection("booking")} />
 
         {/* Brand coverage list and interactive compat checker */}
         <SupportedBrands

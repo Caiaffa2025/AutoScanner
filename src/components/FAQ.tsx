@@ -18,44 +18,39 @@ export default function FAQ() {
 
   const faqList: FAQItem[] = [
     {
-      id: "luz-injecao",
-      question: "A luz da injeção eletrônica acendeu no painel. O diagnóstico ajuda?",
-      answer: "Sim, com certeza. A luz de injeção acesa aponta que a central eletrônica detectou parâmetros fora do padrão na motorização ou sistemas de emissões. Nosso scanner de última geração faz uma varredura completa, lê o código de falha ativo (DTC) e indica exatamente qual sensor ou atuador está com mau funcionamento (ex: Sonda Lambda, corpo de borboleta, bobina de ignição)."
+      id: "diagnostico-tcu",
+      question: "Como o Scanner identifica problemas em câmbios automáticos?",
+      answer: "Utilizamos software de diagnóstico original de montadora para interrogar o módulo eletrônico TCU (Transmission Control Unit). O scanner acessa os mapas de pressão hidráulica, testa os solenóides ativos bidirecionalmente, monitora a temperatura do fluido e extrai os códigos de erro DTCs. Com isso, indicamos se a causa dos trancos e patinação é de origem elétrica, eletrônica ou mecânica profunda antes de qualquer desmontagem física."
     },
     {
-      id: "falha-abs",
-      question: "Como é diagnosticada a falha de ABS?",
-      answer: "A falha no sistema ABS compromete a segurança ativa de frenagem de pânico. Nosso técnico conecta o scanner automotivo diretamente na porta OBD-II para acessar a central de freios. O equipamento realiza testes de sensores de roda individuais, analisa o sinal de velocidade e detecta falhas na válvula hidráulica ou no módulo ABS."
+      id: "luz-injecao-cambio",
+      question: "Por que a luz da injeção acende quando o câmbio automático está falhando?",
+      answer: "O motor e a transmissão trabalham em cooperação permanente na Rede CAN do automóvel. Se o módulo TCU detecta que uma embreagem do câmbio deslizou (patinação) ou houve falha eletrônica de solenóide, ele ordena que a central da injeção (ECU) acenda a luz no painel e force o motor a reduzir força para evitar a quebra total de componentes metálicos internos."
     },
     {
-      id: "falha-airbag",
-      question: "O diagnóstico também lê códigos de erro de Airbag?",
-      answer: "Sim, realizamos o rastreamento completo do sistema de retenção suplementar (SRS/Airbag). Diagnosticamos falhas relacionadas a sensores de impacto, fita do airbag do volante (clock spring), tensores dos cintos de segurança e falhas de comunicação da central de airbag, ajudando a garantir o funcionamento correto em casos de emergência."
+      id: "re-aprendizado-tcu",
+      question: "O scanner consegue recalibrar as trocas de marchas do veículo?",
+      answer: "Sim! Executamos o reset dos adaptativos internos e o re-aprendizado eletrônico de sincronismo do câmbio automático. Esse processo redefine as pressões hidráulicas enviadas aos solenóides baseado no desgaste natural do câmbio, eliminando trancos e sapatadas nas trocas. Recomendamos fortemente realizar essa calibração após a troca preventiva do óleo da transmissão."
     },
     {
-      id: "saude-bateria",
-      question: "Como funciona o teste de bateria e elétrica?",
-      answer: "Verificamos a saúde da bateria através do scanner e de testes operacionais de tensão de partida (CCA) e taxa de carga produzida pelo alternador. Isso permite identificar se o problema de partida do veículo reside em carga baixa da bateria, desgaste natural do acumulador ou falha no sistema de carga e partida."
+      id: "bateria-trancos",
+      question: "Uma bateria ou elétrica cansada pode provocar trancos no câmbio?",
+      answer: "Sim, e de forma bem frequente! Os solenóides magnéticos de controle de marchas demandam alta corrente elétrica rápida. Se a bateria estiver desgastada (abaixo de 12.2V) ou o alternador oscilar, os solenóides atuarão de forma atrasada e irregular, gerando trancos bruscos nas trocas de marchas e registrando falsos códigos de falha de câmbio no painel."
     },
     {
-      id: "reset-manutencao",
-      question: "O que é o Reset de Manutenção e quando ele deve ser feito?",
-      answer: "Muitos veículos modernos exigem que, após a troca de óleo ou revisões periódicas periódicas, o aviso no painel seja redefinido eletronicamente. Nosso scanner automotivo realiza esse reset de intervalos de manutenção e zeramento de avisos, apagando avisos insistentes de revisão e restaurando os cronogramas internos de serviço."
+      id: "abs-dependencia",
+      question: "A falha de freio ABS afeta as marchas do câmbio de alguma maneira?",
+      answer: "Sem dúvida. O módulo de câmbio automático necessita saber a velocidade exata de rolagem do carro de forma confiável para escolher a marcha ideal. O ABS colhe esses dados através dos sensores de rotação das rodas. Se o ABS acender aviso de falha, a transmissão deixa de receber estes dados e pode entrar imediatamente em Modo de Segurança (modo de emergência de fábrica)."
     },
     {
-      id: "leitura-codigos",
-      question: "O que é a leitura de códigos de erro?",
-      answer: "É a extração e decodificação dos códigos DTC (Diagnostic Trouble Codes) armazenados nos múltiplos módulos e computadores de bordo do veículo. Ao invés de adivinhar o defeito baseado em sintomas genéricos, a leitura de códigos fornece informações exatas registradas diretamente pelas centrais eletrônicas em tempo real."
+      id: "diagnostico-preliminar-cambio",
+      question: "Como o Diagnóstico Preliminar me protege de gastos desnecessários?",
+      answer: "Oficinas descuidadas tendem a sugerir a retífica inteira do câmbio automático (serviços de R$ 10.000 a R$ 15.000) por meros desvios eletrônicos de sinal ou solenóides travados em curto. Nosso diagnóstico preliminar computadorizado isola exatamente onde está a falha física ou eletrônica, gerando um laudo ético de fácil visualização para que você faça o conserto exato e certeiro."
     },
     {
-      id: "diagnostico-preliminar",
-      question: "O que é e qual o limite do Diagnóstico Preliminar?",
-      answer: "O diagnóstico preliminar baseia-se no rastreamento eletrônico robusto para encontrar e isolar a raiz do problema elétrico ou de injeção indicado pelas falhas registradas no painel. Ele orienta com extrema precisão qual peça ou chicote necessita de reparo profissional, protegendo você contra trocas errôneas gratuitas de peças saudáveis."
-    },
-    {
-      id: "preco-atendimento",
-      question: "Onde o diagnóstico é feito e qual a área de cobertura?",
-      answer: "O nosso atendimento é móvel e realizado exclusivamente em domicílio, garantindo o máximo conforto para você, sem que precise contratar um guincho ou deslocar o veículo com falhas ativas de injeção ou frenagem. Cobrimos a Grande São Paulo e regiões próximas."
+      id: "atendimento-domicilio-cambio",
+      question: "Como funciona a verificação e diagnóstico preliminar em domicílio?",
+      answer: "Nosso técnico especialista se desloca com o equipamento de varredura completo diretamente até a sua residência, condomínio ou garagem de trabalho em São Paulo e região. Não é necessário guincho: realizamos toda a leitura preliminar no local onde o automóvel está estacionado com dedicação impecável."
     }
   ];
 

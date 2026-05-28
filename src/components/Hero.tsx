@@ -38,7 +38,7 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-raven-red"></span>
               </span>
               <span className="text-xs font-mono font-black tracking-[0.2em] uppercase">
-                SISTEMA INTEGRADO TRIPLICE AUTOSCANNER
+                ESPECIALISTAS EM CÂMBIOS AUTOMÁTICOS & TCU
               </span>
             </motion.div>
 
@@ -49,13 +49,13 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
               transition={{ duration: 0.8, delay: 0.1 }}
             >
               <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tighter leading-none uppercase">
-                Seu carro sem mistérios com{" "}
+                Seu câmbio automático sem mistérios com{" "}
                 <span className="text-raven-red glow-red block sm:inline">
                   AUTOSCANNER ONLINE
                 </span>
               </h1>
               <p className="text-white/60 text-lg md:text-xl font-medium leading-relaxed max-w-xl">
-                Diga adeus ao diagnóstico feito no achômetro. Analisamos 100% da injeção, sensores e eletrônica do seu veículo com o equipamento número 1 em tecnologia de precisão.
+                Diagnóstico computadorizado avançado em domicílio. Identificamos e verificamos problemas de trancos, patinação, atrasos de engate e falhas de solenoides em câmbios automáticos com precisão absoluta.
               </p>
             </motion.div>
 
@@ -68,19 +68,19 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
             >
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-4.5 h-4.5 text-raven-red shrink-0" />
-                <span>Leitura OBD-II Ativa Completa</span>
+                <span>Mapeamento do Módulo TCM (Câmbio)</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-4.5 h-4.5 text-raven-red shrink-0" />
-                <span>Análise de Sensores em Tempo Real</span>
+                <span>Teste de Solenoides e Corpo de Válvulas</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-4.5 h-4.5 text-raven-red shrink-0" />
-                <span>Reset de Alertas de Painel</span>
+                <span>Análise de Desgaste e Pressão do Óleo</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-4.5 h-4.5 text-raven-red shrink-0" />
-                <span>Atendimento em Domicílio (Móvel)</span>
+                <span>Atendimento Completo em Domicílio</span>
               </li>
             </motion.ul>
 
@@ -97,7 +97,7 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
                 className="bg-raven-red hover:bg-[#ff2a30] active:bg-[#c01419] text-white px-8 py-5 rounded-none text-sm font-black tracking-widest uppercase shadow-lg shadow-raven-red/20 transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2 cursor-pointer border border-transparent"
               >
                 <Play className="w-4 h-4 fill-current stroke-none" />
-                Análise de Sintomas
+                Sintomas do Câmbio
               </button>
               <button
                 id="hero-cta-agendar"
@@ -117,7 +117,7 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
               transition={{ duration: 0.8, delay: 0.5 }}
             >
               <Shield className="w-4 h-4 text-raven-red" />
-              <span>Diagnóstico seguro sem violar a garantia de fábrica do carro</span>
+              <span>Verificação não invasiva sem violar a garantia de fábrica do veículo</span>
             </motion.div>
           </div>
 
@@ -139,7 +139,7 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
                     <span className="w-2.5 h-2.5 rounded-none bg-white/40 block"></span>
                     <span className="w-2.5 h-2.5 rounded-none bg-white/20 block"></span>
                   </div>
-                  <span className="text-[11px] font-mono text-white/50 font-bold uppercase tracking-wider">RAVEN_SYS_X.1_OBD2</span>
+                  <span className="text-[11px] font-mono text-white/50 font-bold uppercase tracking-wider">TCU_DIAG_X.4_SCAN</span>
                 </div>
                 <div className="flex items-center gap-1.5 bg-[#0f0f0f] border border-raven-border py-1 px-3 rounded-none">
                   <span className="w-2 h-2 bg-raven-red rounded-full animate-ping"></span>
@@ -150,20 +150,20 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
               {/* Terminal Display */}
               <div className="space-y-3 py-6 font-mono text-xs text-white/80">
                 <div className="flex justify-between border-b border-raven-border/40 pb-1.5">
-                  <span className="text-white/40 uppercase">MAQUINA DIRETRIZ:</span>
-                  <span className="text-white font-bold">SCANNER OBD-II BLUETOOTH AUTOSCANNER</span>
+                  <span className="text-white/40 uppercase">SISTEMA ACESSADO:</span>
+                  <span className="text-white font-bold">TRANSMISSION CONTROL MODULE (TCM/TCU)</span>
                 </div>
                 <div className="flex justify-between border-b border-raven-border/40 pb-1.5">
-                  <span className="text-white/40 uppercase">CONEXÃO VEÍCULO:</span>
-                  <span className="text-raven-red font-bold">ATIVO (CAN BUS SPEED HIGH)</span>
+                  <span className="text-white/40 uppercase">EMBREAGEM / SOLENOIDE:</span>
+                  <span className="text-raven-red font-bold">LEITURA DE PRESSÃO HIDRÁULICA</span>
                 </div>
                 <div className="flex justify-between border-b border-raven-border/40 pb-1.5">
-                  <span className="text-white/40 uppercase">TENSÃO ELETRÔNICA:</span>
-                  <span className="text-white font-bold">12.8V (REDE OK)</span>
+                  <span className="text-white/40 uppercase">ALERTA EM MEMÓRIA:</span>
+                  <span className="text-white font-bold">DTC P0700 (FALHA NO SOLENOIDE)</span>
                 </div>
                 <div className="flex justify-between border-b border-raven-border/40 pb-1.5">
-                  <span className="text-white/40 uppercase">CÓDIGOS DE FALHA:</span>
-                  <span className="text-white font-bold bg-raven-red px-1.5 py-0.5">01 FALHA ATIVA</span>
+                  <span className="text-white/40 uppercase">FLUIDO DE TRANSMISSÃO:</span>
+                  <span className="text-white font-bold">85°C (ESTÁVEL OPERACIONAL)</span>
                 </div>
               </div>
 
@@ -178,11 +178,11 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
                   />
                 </svg>
                 <div className="absolute top-1 right-2 text-[8px] text-white/40 font-mono tracking-wider uppercase">
-                  SONDA LAMBDA TELEMETRIA (Hz)
+                  TELEMETRIA DO SOLENOIDE DE PRESSÃO A (bar)
                 </div>
                 <div className="flex items-center justify-between w-full relative z-10 text-[9px] font-mono font-bold text-raven-red uppercase">
-                  <span>950 RPM - ESTÁVEL</span>
-                  <span>98% EFICIÊNCIA ELETRÔNICA</span>
+                  <span>CAN BUS SPEED: HIGH</span>
+                  <span>PRONTO PARA RE-APRENDIZO DE SINCRO</span>
                 </div>
               </div>
             </div>

@@ -9,33 +9,33 @@ import { DiagnosticPackage } from "../types";
 const PACKAGES: DiagnosticPackage[] = [
   {
     id: "preventive",
-    name: "Varredura Preventiva Check-Up",
-    description: "Ideal para check-ups periódicos ou antes de viagens para garantir segurança absoluta.",
+    name: "Varredura Preventiva Câmbio Check-Up",
+    description: "Ideal para verificação de comportamento, análise eletrônica rápida e detecção precoce de irregularidades elétricas no câmbio.",
     price: 119,
-    timeEstimated: "30 min",
+    timeEstimated: "35 min",
     features: [
-      "Varredura exclusiva na central de Injeção",
-      "Leitura de códigos de falha (DTCs)",
-      "Análise de saúde interna da bateria",
-      "Teste dinâmico do alternador de carga",
-      "Reset físico de avisos simples",
-      "Emissão de relatório técnico PDF simplificado"
+      "Leitura ativa no módulo eletrônico do câmbio (TCU)",
+      "Análise de códigos de falha (DTC) gerados",
+      "Leitura auxiliar da central de injeção",
+      "Análise de tensão da bateria (tensão instável)",
+      "Reset de avisos simples de revisão no painel",
+      "Relatório técnico preliminar simplificado digital"
     ]
   },
   {
     id: "complete",
-    name: "Diagnóstico Eletrônico Completo",
-    description: "O mais solicitado. Uma varredura minuciosa com o sistema AUTOSCANNER ONLINE em tudo que o carro possui.",
+    name: "Diagnóstico Eletrônico Avançado",
+    description: "Ideal para trancos, patinação ou luzes acesas. Rastreamento profundo de todos os sistemas correlacionados com calibração adaptativa.",
     price: 199,
-    timeEstimated: "50 min",
+    timeEstimated: "60 min",
     features: [
-      "Leitura ativa em todos os módulos (Injeção, ABS, Airbag, Clima, Rede)",
-      "Monitoramento dinâmico de mais de 40 parâmetros/seg",
-      "Varredura e reset de anomalias passivas/históricas",
-      "Ajuste e sincronização eletrônica pós-reparos",
-      "Diagnóstico preventivo do catalisador",
-      "Relatório detalhado exportado para o WhatsApp",
-      "Conselho mecânico profissional das falhas encontradas"
+      "Mapeamento completo do TCU e solenoides hidráulicos",
+      "Varredura em todos os periféricos (ABS, Airbag e Injeção)",
+      "Recalibração eletrônica e reset adaptativo do câmbio",
+      "Monitoramento dinâmico de pressão física de pressão",
+      "Análise crítica de flutuação de carga da bateria",
+      "Relatório técnico completo em PDF enviado via WhatsApp",
+      "Diagnóstico preliminar fundamentado sobre o estado interno"
     ],
     isPopular: true
   }

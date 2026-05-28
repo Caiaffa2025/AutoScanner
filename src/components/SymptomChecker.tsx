@@ -27,121 +27,103 @@ import { Symptom } from "../types";
 
 const SYMPTOMS: Symptom[] = [
   {
-    id: "injection-light",
-    name: "Luz da Injeção Acesa no Painel",
-    icon: "AlertTriangle",
-    description: "Sinalizador amarelo em formato de motor travado no painel, indicando anomalias ativas na queima de combustível ou leitura eletrônica de sensores essenciais.",
-    likelyCause: "Sonda lambda avariada, bicos injetores oxidados ou travados, cabos de velas rompidos, combustível com alto teor de impurezas ou catalisador fadigado.",
-    systemToScanId: "ecu",
+    id: "gear-jerk",
+    name: "Trancos Severos nas Trocas de Marcha",
+    icon: "TrendingDown",
+    description: "Solavancos secos e solavancos ao trocar as marchas, principalmente na redução de velocidade ou ao engatar D (Drive) ou R (Reverse).",
+    likelyCause: "Solenóides de embreagem obstruídos, desgaste do corpo de válvulas interno ou óleo de transmissão degradado e fora da viscosidade nominal.",
+    systemToScanId: "tcu",
     severity: "high"
   },
   {
-    id: "stuttering",
-    name: "Motor Falhando, Engasgando ou Fraco",
-    icon: "Flame",
-    description: "O veículo chacoalha ao arrancar, apresenta perda repentina de potência sob carga e oscila severamente a marcha lenta.",
-    likelyCause: "Baixa pressão na bomba de combustível, corpo de borboleta (TBI) obstruído com fuligem, falha interna mecânica de cilindro (misfire) ou velas saturadas.",
-    systemToScanId: "ecu",
+    id: "gear-slippage",
+    name: "Câmbio Patinando (Gira mas não traciona)",
+    icon: "Gauge",
+    description: "O giro do motor sobe repentinamente mas o veículo não ganha velocidade correspondente, dando a sensação de ponto morto temporário.",
+    likelyCause: "Baixa pressão na linha hidráulica da transmissão, discos internos de fricção gastos ou sensores de pressão com leitura corrompida.",
+    systemToScanId: "tcu",
     severity: "high"
   },
   {
-    id: "cooling-issue",
-    name: "Temperatura Elevada / Ventoinha Direta",
-    icon: "Thermometer",
-    description: "O medidor de caloria se aproxima do vermelho de emergência ou o ventilador de arrefecimento dispara imediatamente sem desligar.",
-    likelyCause: "Avaria no Sensor de Temperatura do Líquido (ECT), válvula termostática travada fechada ou relé de comando do eletroventilador com curto interno.",
-    systemToScanId: "ecu",
+    id: "limp-mode",
+    name: "Aviso de Transmissão em Modo de Emergência",
+    icon: "ShieldAlert",
+    description: "O veículo ativa o modo de segurança (Limp Mode), travando a transmissão em 3ª marcha para proteger os componentes internos de atrito fatal.",
+    likelyCause: "Falha crítica de comunicação na central eletrônica da transmissão, solenóides inoperantes ou sinal corrompido de rotação de entrada/saída.",
+    systemToScanId: "tcu",
     severity: "high"
   },
   {
-    id: "flex-af-issue",
-    name: "Dificuldade de Partida / Pane de Combustível Flex (A/F)",
+    id: "shudder-cvt",
+    name: "Tremor / Vibração Severa na Saída (CVT ou Dupla Embreagem)",
     icon: "Activity",
-    description: "Veículo demora muito para entrar em funcionamento pela manhã ou apresenta alta oscilação e falhas após abastecer com outro tipo de combustível.",
-    likelyCause: "Erro de reconhecimento e ajuste do parâmetro de Relação Ar/Combustível (A/F) na memória volátil da injeção. O AutoScanner realiza o re-aprendizado forçado do combustível físico.",
-    systemToScanId: "ecu",
+    description: "O carro trepida de forma assustadora ao arrancar do repouso ou em aclives acentuados, normalizando apenas em rotações mais elevadas.",
+    likelyCause: "Contaminação do fluido hidráulico CVT, desgaste nas garras eletrônicas de embreagem ou descalibração do re-aprendizado no módulo TCU.",
+    systemToScanId: "tcu",
+    severity: "high"
+  },
+  {
+    id: "gear-delay",
+    name: "Atraso no Engate de Partida de D ou R",
+    icon: "Thermometer",
+    description: "Demora excessiva (acima de 2 segundos) para o carro engrenar e se mover após mover a alavanca seletora.",
+    likelyCause: "Fuga de pressão hidráulica através de anéis de vedação ressecados ou solenóides moduladoras travando a frio devido a resíduos de desgaste.",
+    systemToScanId: "tcu",
     severity: "medium"
   },
   {
-    id: "dpf-diesel",
-    name: "Filtro de Partículas Obstruído (Diesel - DPF/Arla32)",
-    icon: "Cpu",
-    description: "Luz de emissões e do filtro DPF acesa no painel, força brutalmente cortada (modo de segurança de fábrica) e fumaça densa no escapamento.",
-    likelyCause: "Saturação de fuligem acumulada nas colmeias filtrantes do DPF por circulação urbana continuada em baixas rotações. Exige o ciclo manual ou estático de Regeneração de Filtro pelo Scanner.",
+    id: "injection-light",
+    name: "Luz da Injeção Acesa no Painel",
+    icon: "AlertTriangle",
+    description: "Sinalizador amarelo em formato de motor aceso. Em carros automáticos, frequentemente indica uma falha integrada do motor em decorrência do câmbio ou vice-versa.",
+    likelyCause: "Sonda lambda avariada, bicos injetores oxidados, combustível adulterado ou falha crítica gerada do módulo de transmissão para a ECU.",
     systemToScanId: "ecu",
     severity: "high"
   },
   {
     id: "abs-alarm",
-    name: "Luz do ABS / Controle de Tração (ESP) Ativo",
-    icon: "Gauge",
-    description: "O sistema eletrônico de assistência de frenagem fica inativo, acendendo o alerta que elimina o antitravamento de segurança antiderrapagem.",
-    likelyCause: "Sensor de rotação ativo em alguma das rodas dianteiras ou traseiras rompido, anel magnético de cubo de roda danificado ou falha nas válvulas da central de ABS.",
+    name: "Falha no ABS / Controle de Tração",
+    icon: "Disc",
+    description: "Indicador do ABS ativo. O sistema afeta a caixa de câmbio automática, pois a perda de dados dos sensores de velocidade de roda impede o TCU de decidir os pontos exatos de troca.",
+    likelyCause: "Sensores eletromagnéticos de rotação da roda partidos ou obstruídos por detritos metálicos de frenagem.",
     systemToScanId: "abs",
     severity: "high"
   },
   {
     id: "airbag-warning",
-    name: "Aviso de Airbag (SRS) e Cinto Pretensor Ativo",
-    icon: "ShieldAlert",
-    description: "Sinal vermelho de retenção complementar aceso no painel de instrumentos, invalidando o disparo de bolsas de ar frontais ou de cortina.",
-    likelyCause: "Fita de contato (Clock Spring) no cubo do volante rompida, chicotes de sensores localizados debaixo do banco partidos ou memória de impacto travada.",
+    name: "Luz do Airbag (SRS) Acesa",
+    icon: "Cpu",
+    description: "Mensagem ou símbolo vermelho de restrição suplementar no painel, desabilitando o funcionamento das bolsas em qualquer eventual desaceleração brusca.",
+    likelyCause: "Rompimento da cinta de contato eletrônico (clock-spring) no volante ou conexões oxidadas sob os bancos do motorista ou passageiro.",
     systemToScanId: "srs",
     severity: "medium"
   },
   {
-    id: "gear-jerk",
-    name: "Trancos severos ou Patinação em Câmbio Automático",
-    icon: "TrendingDown",
-    description: "Trocas ásperas com solavancos secos de marchas, tempo excessivo de engate manual ou câmbio deslizando/patinando sem tracionar corretamente.",
-    likelyCause: "Solenoides hidráulicos de troca de marcha obstruídos, baixo nível ou viscosidade vencida do óleo de câmbio, ou descalibração dos adaptativos internos.",
-    systemToScanId: "tcu",
-    severity: "high"
-  },
-  {
-    id: "eps-steering",
-    name: "Direção Hidráulica/Elétrica Pesada e Dura",
-    icon: "Compass",
-    description: "O volante de direção assistida ficou excessivamente duro ou apresenta desvio puxando consistentemente o veículo para as laterais.",
-    likelyCause: "Perda da calibração eletrônica do Sensor de Ângulo de Direção (SAS) após reparo de suspensão, ou interrupção na alimentação do motor eletrônico assistido.",
-    systemToScanId: "eps",
-    severity: "high"
-  },
-  {
-    id: "electrical-flicker",
-    name: "Oscilações de Conforto (Vidros, Travas e Chave)",
+    id: "battery-issue",
+    name: "Oscilação de Bateria / Tensão Fraca",
     icon: "Zap",
-    description: "Acessórios de habitáculo agindo de maneira anômala: fechamentos forçados de vidros falhando, travamento instável ou alarmes ativados à toa.",
-    likelyCause: "Instabilidade de comunicação gerada pelo Módulo Principal de Carroceria (BCM), queda na regulação de tensão da bateria/alternador ou perda de transponder.",
-    systemToScanId: "bcm",
+    description: "Instabilidade elétrica generalizada. O Módulo TCU é extremamente sensível à tensão; oscilações abaixo de 12.2V provocam trancos severos e falsos códigos de erro.",
+    likelyCause: "Placas internas da bateria sulfatadas ou alternador com desgaste nas escovas reguladoras de carga de corrente.",
+    systemToScanId: "battery",
     severity: "medium"
   },
   {
-    id: "hvac-compressor",
-    name: "Ar Condicionado Não Gela / Temperatura Instável",
-    icon: "Wind",
-    description: "O ventilador interno funciona mas o compressor não acopla, ou o ar condicionado sopra temperatura ambiente em dias muito quentes.",
-    likelyCause: "Sinal incorreto gerado pelo transdutor de pressão de gás (Pressostato) na rede de ar condicionado, ou mau funcionamento de válvulas misturadoras internas via HVAC.",
-    systemToScanId: "hvac",
+    id: "maintenance-reset",
+    name: "Reset de Manutenção / Troca de Óleo",
+    icon: "Compass",
+    description: "Aviso recorrente no painel indicando necessidade de revisão. Essencial para reinicializar o tempo de desgaste eletrônico e alertas após a troca preventiva do fluido de câmbio.",
+    likelyCause: "Atingimento da quilometragem limite programada pelo fabricante para substituição de fluidos ou monitoramento periódico de filtros.",
+    systemToScanId: "service",
     severity: "low"
-  },
-  {
-    id: "tpms-tires",
-    name: "Alerta de Pressão de Pneus (TPMS) Piscando",
-    icon: "Disc",
-    description: "Luz de monitoramento de pneus acesa no painel indicando anormalidade mesmo que a calibragem física esteja 100% perfeita em todas as rodas.",
-    likelyCause: "Desgaste natural da bateria de lítio interna do transmissor da válvula de roda ou perda de recepção de sensor por rádio frequência, exigindo pareamento OBD.",
-    systemToScanId: "tpms",
-    severity: "medium"
   }
 ];
 
 const CATEGORIES = [
-  { id: "all", name: "Todos as Falhas" },
+  { id: "all", name: "Todos os Sintomas" },
+  { id: "transmission", name: "Câmbio Automático (TCU)" },
   { id: "engine", name: "Motor e Injeção (ECU)" },
-  { id: "safety", name: "Segurança Ativa (ABS/SRS/TPMS)" },
-  { id: "drivetrain", name: "Câmbio e Direção (TCU/EPS)" },
-  { id: "comfort", name: "Cabine e Conforto (BCM/HVAC)" }
+  { id: "safety", name: "Freios e Segurança (ABS/SRS)" },
+  { id: "maintenance", name: "Elétrica & Manutenção (Bateria/Reset)" }
 ];
 
 interface SymptomCheckerProps {
@@ -151,14 +133,14 @@ interface SymptomCheckerProps {
 
 export default function SymptomChecker({ onSelectSymptomForScan, onBookNow }: SymptomCheckerProps) {
   const [activeCategory, setActiveCategory] = useState<string>("all");
-  const [activeSymptomId, setActiveSymptomId] = useState<string>("injection-light");
+  const [activeSymptomId, setActiveSymptomId] = useState<string>("gear-jerk");
 
   const filteredSymptoms = SYMPTOMS.filter((s) => {
     if (activeCategory === "all") return true;
+    if (activeCategory === "transmission") return s.systemToScanId === "tcu";
     if (activeCategory === "engine") return s.systemToScanId === "ecu";
-    if (activeCategory === "safety") return ["abs", "srs", "tpms"].includes(s.systemToScanId);
-    if (activeCategory === "drivetrain") return ["tcu", "eps"].includes(s.systemToScanId);
-    if (activeCategory === "comfort") return ["bcm", "hvac"].includes(s.systemToScanId);
+    if (activeCategory === "safety") return ["abs", "srs"].includes(s.systemToScanId);
+    if (activeCategory === "maintenance") return ["battery", "service"].includes(s.systemToScanId);
     return true;
   });
 
@@ -209,10 +191,10 @@ export default function SymptomChecker({ onSelectSymptomForScan, onBookNow }: Sy
             Diagnóstico Inteligente
           </span>
           <h2 className="font-display font-black text-3xl sm:text-5xl mt-6 tracking-tighter uppercase leading-none font-sans">
-            Avarias e Diagnósticos Suportados
+            Mapeamento de Câmbio & Falhas Suportadas
           </h2>
           <p className="text-white/60 mt-4 text-base font-semibold leading-relaxed font-sans">
-            O AutoScanner Online possui homologação com cobertura em profundidade para mapear, identificar e consertar absolutamente qualquer tipo de desvio eletrônico ou mecânico no veículo.
+            Nosso foco principal é a verificação especializada de Câmbios Automáticos do mercado, realizando o diagnóstico preliminar detalhado de pressão, solenóides de troca e saúde interna do TCU em domicílio, cobrindo também falhas de motor, ABS, Airbag, Bateria e Reset de Avisos.
           </p>
         </div>
 
@@ -228,10 +210,10 @@ export default function SymptomChecker({ onSelectSymptomForScan, onBookNow }: Sy
                   // Auto-focus on the first symptom of newly selected category to yield crisp previews
                   const matched = SYMPTOMS.filter((s) => {
                     if (cat.id === "all") return true;
+                    if (cat.id === "transmission") return s.systemToScanId === "tcu";
                     if (cat.id === "engine") return s.systemToScanId === "ecu";
-                    if (cat.id === "safety") return ["abs", "srs", "tpms"].includes(s.systemToScanId);
-                    if (cat.id === "drivetrain") return ["tcu", "eps"].includes(s.systemToScanId);
-                    if (cat.id === "comfort") return ["bcm", "hvac"].includes(s.systemToScanId);
+                    if (cat.id === "safety") return ["abs", "srs"].includes(s.systemToScanId);
+                    if (cat.id === "maintenance") return ["battery", "service"].includes(s.systemToScanId);
                     return true;
                   });
                   if (matched.length > 0) {

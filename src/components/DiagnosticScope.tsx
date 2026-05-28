@@ -12,7 +12,14 @@ import {
   Wrench, 
   Database, 
   Search,
-  Sparkles
+  Sparkles,
+  Cpu,
+  RefreshCw,
+  Droplets,
+  Disc,
+  Activity,
+  Laptop,
+  ClipboardCheck
 } from "lucide-react";
 
 interface DiagnosticScopeProps {
@@ -22,53 +29,60 @@ interface DiagnosticScopeProps {
 export default function DiagnosticScope({ onBookNow }: DiagnosticScopeProps) {
   const scopeItems = [
     {
-      id: "injecao",
-      title: "Luz de Injeção Acesa",
-      desc: "Varredura na central do motor para rastrear emissões, falhas na Sonda Lambda, TBI, bicos injetores e qualidade de combustível.",
-      icon: <AlertTriangle className="w-5 h-5 text-raven-red" />,
-      badge: "Injeção"
+      id: "scanner-transmissao",
+      title: "Scanner de Transmissão",
+      desc: "Varredura computadorizada profunda na central TCU para ler dados do câmbio em tempo real, monitorar o funcionamento do corpo de válvulas e mapear falhas de solenoides.",
+      icon: <Cpu className="w-5 h-5 text-raven-red" />,
+      badge: "Módulo TCU"
     },
     {
-      id: "abs",
-      title: "Falha ABS / ESP",
-      desc: "Interrogação da central de frenagem ABS para decodificar anomalias no sistema antitravamento de pânico e controle de tração.",
-      icon: <Gauge className="w-5 h-5 text-raven-red" />,
-      badge: "Segurança"
+      id: "reset-adaptacao",
+      title: "Reset e Adaptação",
+      desc: "Redefinição completa dos parâmetros adaptativos de pressão hidráulica e desgaste das embreagens, eliminando trancos severos e atrasos de trocas.",
+      icon: <RefreshCw className="w-5 h-5 text-raven-red" />,
+      badge: "Calibração"
     },
     {
-      id: "airbag",
-      title: "Falha de Airbag (SRS)",
-      desc: "Leitura de conectores, fita do volante (clock spring) e sensores de colisão ativos que acendem o aviso de airbag no painel.",
-      icon: <ShieldAlert className="w-5 h-5 text-raven-red" />,
-      badge: "Retenção"
+      id: "oleo-atf",
+      title: "Troca de Óleo ATF (Diagnóstico)",
+      desc: "Análise técnica computadorizada de envelhecimento térmico, contaminação do fluido e necessidade preventiva de substituição do óleo de transmissão (ATF).",
+      icon: <Droplets className="w-5 h-5 text-raven-red" />,
+      badge: "Lubrificação"
     },
     {
-      id: "bateria",
-      title: "Saúde da Bateria",
-      desc: "Verificação da tensão operacional sob partida (CCA), taxa de recarga do alternador e detecção de fugas de corrente elétrica.",
-      icon: <Battery className="w-5 h-5 text-raven-red" />,
-      badge: "Elétrica"
+      id: "troca-filtro",
+      title: "Troca de Filtro (Inspeção)",
+      desc: "Verificação de restrição no fluxo hidráulico e aconselhamento do estado de saturação de filtros de transmissão primários ou do cárter.",
+      icon: <Disc className="w-5 h-5 text-raven-red" />,
+      badge: "Filtragem"
     },
     {
-      id: "reset",
-      title: "Reset de Manutenção",
-      desc: "Zerar avisos periódicos de manutenção, avisos de troca de óleo vencida e redefinir indicadores visuais de advertência após o reparo.",
-      icon: <Wrench className="w-5 h-5 text-raven-red" />,
-      badge: "Painel"
+      id: "reaprendizado",
+      title: "Reaprendizado Eletrônico",
+      desc: "Ciclos guiados via scanner para ressincronizar pontos de acorrentamento e contato de embreagens para câmbios automáticos, CVTs ou Dupla Embreagem (DSG/Powershift).",
+      icon: <Activity className="w-5 h-5 text-raven-red" />,
+      badge: "Sincronismo"
     },
     {
-      id: "leitura",
-      title: "Leitura de Códigos de Erro",
-      desc: "Rastreamento completo e transmissão dos códigos DTC (Diagnostic Trouble Codes) gravados na memória eletrônica do veículo.",
-      icon: <Database className="w-5 h-5 text-raven-red" />,
-      badge: "Scanner OBD2"
+      id: "diagnostico-eletronico",
+      title: "Diagnóstico Eletrônico Avançado",
+      desc: "Rastreamento transversal de toda a malha multiplexada do veículo para isolar perdas de sinal CAN Bus, sensores de velocidade de turbina e falhas elétricas gerais.",
+      icon: <Laptop className="w-5 h-5 text-raven-red" />,
+      badge: "Eletrônica Ativa"
+    },
+    {
+      id: "pre-compra",
+      title: "Inspeção Pré-Compra",
+      desc: "Análise eletrônica e teste dinâmico rigoroso da transmissão automática de um veículo que você deseja comprar, blindando sua aquisição contra quebras caríssimas.",
+      icon: <ClipboardCheck className="w-5 h-5 text-raven-red" />,
+      badge: "Pré-Compra"
     },
     {
       id: "preliminar",
-      title: "Diagnóstico Preliminar",
-      desc: "Análise técnica prévia sobre o possível problema de pane ou falha existente, blindando o cliente de trocas precipitadas de peças.",
+      title: "Diagnóstico Preliminar Especializado",
+      desc: "Mapeamento prévio sobre o tipo de anomalia existente no veículo com foco no comportamento do câmbio, blindando o cliente de trocas desnecessárias de peças.",
       icon: <Search className="w-5 h-5 text-raven-red" />,
-      badge: "Aconselhamento"
+      badge: "Laudo Preliminar"
     }
   ];
 
@@ -87,10 +101,10 @@ export default function DiagnosticScope({ onBookNow }: DiagnosticScopeProps) {
             Escopo Operacional Atendido
           </span>
           <h2 className="font-display font-black text-3xl sm:text-5xl mt-6 tracking-tighter uppercase leading-none">
-            Diagnóstico Preliminar e Códigos de Falha
+            Diagnóstico Preliminar Interativo
           </h2>
           <p className="text-white/60 mt-4 text-base font-semibold leading-relaxed">
-            Consulte de forma transparente o tipo de serviço que se baseia a nossa análise computadorizada preliminar para detectar o possível problema crítico existente e resolver os códigos de falha do seu veículo.
+            Nossa plataforma é estruturada para fornecer um diagnóstico computadorizado preliminar baseado na leitura minuciosa de códigos de falha do veículo, com foco em identificar patinação, trancos e anomalias eletrônicas em câmbios automáticos.
           </p>
         </div>
 

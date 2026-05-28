@@ -59,38 +59,38 @@ export default function Features() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <FeatureCard
             icon={<Zap className="w-5 h-5" />}
-            title="Leitura de Ultra Velocidade"
-            description="Escaneamento transversal de todos os sistemas ativos do veículo (ABS, ECM, SRS, TCU, BCM) em menos de 120 segundos."
+            title="Escaneamento de Ultra Velocidade"
+            description="Escaneamento transversal de todos os sistemas ativos do veículo com foco central na unidade TCM/TCU de câmbio e integração com módulo do motor."
             id="feature-speed"
           />
           <FeatureCard
             icon={<Layers className="w-5 h-5" />}
-            title="Mapeamento da Rede CAN Bus"
-            description="Varredura avançada da comunicação multiplexada do veículo para isolar perdas de sinal, curtos-circuitos e erros de interligação entre centrais."
+            title="Mapeamento Integrado REDE CAN"
+            description="Varredura avançada da comunicação multiplexada do veículo para isolar perdas de sinal, atrasos de dados e interrupções que afetam as trocas de marchas."
             id="feature-can-network"
           />
           <FeatureCard
             icon={<Compass className="w-5 h-5" />}
-            title="Nuvem Intelectual Integrada"
-            description="Consultas instantâneas ao banco de dados com esquemas elétricos e boletins de serviço oficiais atualizados periodicamente."
+            title="Boletins Técnicos Oficiais"
+            description="Consultas instantâneas aos manuais técnicos oficiais das montadoras para correlação exata de sintomas e soluções de câmbios automáticos."
             id="feature-cloud"
           />
           <FeatureCard
             icon={<Smartphone className="w-5 h-5" />}
-            title="Ativação Ativa e Bidirecional"
-            description="Enviamos comandos acoplados da ferramenta para os atuadores do carro (válvulas, ventoinhas), inspecionando integridade física."
+            title="Testes de Atuadores Ativos"
+            description="Enviamos comandos bidirecionais via scanner para inspecionar fisicamente o acoplamento de embreagens e válvulas solenóides do câmbio."
             id="feature-test"
           />
           <FeatureCard
             icon={<FileText className="w-5 h-5" />}
-            title="Laudo Técnico no WhatsApp"
-            description="Geração instantânea e exportação automática de relatórios de falha DTC com diagnósticos exatos em formato digital prático."
+            title="Laudo Técnico Completo"
+            description="Exportação automatizada de relatórios DTC detalhados em PDF direto no seu WhatsApp, detalhando o diagnóstico e a saúde da transmissão."
             id="feature-report"
           />
           <FeatureCard
             icon={<ShieldCheck className="w-5 h-5" />}
-            title="Calibração do Barramento CAN"
-            description="Calibração de sensores pós-troca (ângulo de direção, ajuste adaptativo de borboletas, reset de alertas antigos parados no painel)."
+            title="Calibração de Adaptativos"
+            description="Executamos o reset de memória e recalibração dos parâmetros de desgaste de embreagem e ponto de contato das marchas após serviços mecânicos."
             id="feature-calibration"
           />
         </div>

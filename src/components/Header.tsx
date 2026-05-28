@@ -63,7 +63,7 @@ export default function Header({ onNavigate }: HeaderProps) {
               </div>
               <p className="text-[9px] font-mono tracking-[0.2em] text-white/50 uppercase -mt-1 flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-raven-red animate-pulse"></span>
-                Diagnóstico de Última Geração
+                Especialistas em Câmbio Automático
               </p>
             </div>
           </div>
