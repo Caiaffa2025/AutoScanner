@@ -7,11 +7,13 @@ import { useState } from "react";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import DiagnosticScope from "./components/DiagnosticScope";
 import SymptomChecker from "./components/SymptomChecker";
 import SupportedBrands from "./components/SupportedBrands";
 import Features from "./components/Features";
 import PricingPackages from "./components/PricingPackages";
 import BookingForm from "./components/BookingForm";
+import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
 import { AlertCircle, CheckCircle, Sparkles, X } from "lucide-react";
@@ -144,6 +146,9 @@ export default function App() {
           onBookNow={() => handleScrollToSection("booking")}
         />
 
+        {/* Scope of Preliminary Diagnostics and Fault Codes */}
+        <DiagnosticScope onBookNow={() => handleScrollToSection("booking")} />
+
         {/* Symptoms checker */}
         <SymptomChecker
           onSelectSymptomForScan={handleSymptomSelect}
@@ -169,6 +174,9 @@ export default function App() {
             showNotification("Sua reserva de diagnóstico no AUTOSCANNER ONLINE foi enviada com sucesso!", "success")
           }
         />
+
+        {/* FAQ - Frequently Asked Questions */}
+        <FAQ />
         
       </main>
 
