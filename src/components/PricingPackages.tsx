@@ -32,7 +32,7 @@ const PACKAGES: DiagnosticPackage[] = [
       "Mapeamento completo do TCU e solenoides hidráulicos",
       "Varredura em todos os periféricos (ABS, Airbag e Injeção)",
       "Recalibração eletrônica e reset adaptativo do câmbio",
-      "Monitoramento dinâmico de pressão física de pressão",
+      "Leitura dos Sensores de Pressão Eletrônica e Solenoides",
       "Análise crítica de flutuação de carga da bateria",
       "Relatório técnico completo em PDF enviado via WhatsApp",
       "Diagnóstico preliminar fundamentado sobre o estado interno"

@@ -30,8 +30,8 @@ export default function DiagnosticScope({ onBookNow }: DiagnosticScopeProps) {
   const scopeItems = [
     {
       id: "scanner-transmissao",
-      title: "Scanner de Transmissão",
-      desc: "Varredura computadorizada profunda na central TCU para ler dados do câmbio em tempo real, monitorar o funcionamento do corpo de válvulas e mapear falhas de solenoides.",
+      title: "Leitura dos Sensores de Pressão Eletrônica e Solenoides",
+      desc: "Varredura computadorizada profunda na central TCU para ler dados do câmbio em tempo real, monitorar o funcionamento do corpo de válvulas e mapear falhas de solenoides e variação de pressão.",
       icon: <Cpu className="w-5 h-5 text-raven-red" />,
       badge: "Módulo TCU"
     },
