@@ -6,7 +6,7 @@
 import { motion } from "motion/react";
 import { Gauge, CheckCircle, Shield, ArrowRight, Play, Cpu, Tablet } from "lucide-react";
 
-const raven3ScannerImg = "/src/assets/images/raven_3_scanner_1785078735960.jpg";
+const raven3ScannerImg = "/images/raven_3_scanner.jpg";
 
 interface HeroProps {
   onCheckSymptoms: () => void;
