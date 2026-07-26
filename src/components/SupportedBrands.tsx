@@ -451,11 +451,11 @@ export default function SupportedBrands({ onPreFillBrand, onBookNow }: Supported
           MONTADORAS POPULARES ATENDIDAS COMPLEMENTARMENTE (COMENTÁRIO TÉCNICO AUTOSCANNER ONLINE)
         </p>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 max-w-6xl mx-auto">
           {BRANDS.map((item) => (
             <div
               key={item.id}
-              className="bg-[#0c0c0c] border border-raven-border p-5 hover:border-[#444] hover:bg-[#111] transition-all duration-300 group flex flex-col justify-between min-h-[220px] rounded-none relative"
+              className="bg-[#0c0c0c] border border-raven-border p-3.5 sm:p-5 hover:border-[#444] hover:bg-[#111] transition-all duration-300 group flex flex-col justify-between min-h-[200px] sm:min-h-[220px] rounded-none relative"
             >
               <div>
                 {/* Brand icon and origin badge */}

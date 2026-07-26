@@ -48,13 +48,13 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tighter leading-none uppercase">
+              <h1 className="font-display font-black text-3xl sm:text-5xl lg:text-7xl tracking-tighter leading-none uppercase break-words">
                 Seu câmbio automático sem mistérios com{" "}
                 <span className="text-raven-red glow-red block sm:inline">
                   AUTOSCANNER ONLINE
                 </span>
               </h1>
-              <p className="text-white/60 text-lg md:text-xl font-medium leading-relaxed max-w-xl">
+              <p className="text-white/60 text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-xl">
                 Diagnóstico computadorizado avançado em domicílio. Identificamos e verificamos problemas de trancos, patinação, atrasos de engate e falhas de solenoides em câmbios automáticos com precisão absoluta.
               </p>
             </motion.div>
@@ -128,7 +128,7 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="relative bg-[#161616] border border-raven-border rounded-none p-6 shadow-2xl glow-box-red w-full max-w-lg aspect-video flex flex-col justify-between overflow-hidden">
+            <div className="relative bg-[#161616] border border-raven-border rounded-none p-4 sm:p-6 shadow-2xl glow-box-red w-full max-w-lg aspect-auto sm:aspect-video flex flex-col justify-between overflow-hidden min-h-[280px]">
               <div className="absolute top-0 right-0 p-8 w-48 h-48 bg-raven-red/5 rounded-full filter blur-xl pointer-events-none" />
 
               {/* Terminal Head */}

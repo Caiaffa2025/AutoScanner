@@ -113,7 +113,7 @@ export default function DiagnosticScope({ onBookNow }: DiagnosticScopeProps) {
           {scopeItems.map((item, index) => (
             <div 
               key={item.id}
-              className={`bg-[#121212] border border-raven-border p-6 rounded-none flex flex-col justify-between hover:border-white/30 hover:scale-[1.02] transition-all duration-300 group ${
+              className={`bg-[#121212] border border-raven-border p-4 sm:p-6 rounded-none flex flex-col justify-between hover:border-white/30 hover:scale-[1.02] transition-all duration-300 group ${
                 item.id === "preliminar" ? "lg:col-span-2 xl:col-span-2 border-dashed border-raven-red/40 bg-raven-red/5" : ""
               }`}
             >

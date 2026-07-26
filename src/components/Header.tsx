@@ -162,7 +162,7 @@ export default function Header({ onNavigate }: HeaderProps) {
               onClick={() => handleLinkClick("pricing")}
               className="block w-full text-left px-4 py-3 rounded-none text-white/80 hover:text-white hover:bg-white/5 text-sm font-bold uppercase tracking-wider transition-colors border-l-2 border-transparent hover:border-raven-red"
             >
-              Preços e Palno
+              Preços e Pacotes
             </button>
             <div className="pt-4 border-t border-raven-border flex flex-col gap-3 px-4">
               <a

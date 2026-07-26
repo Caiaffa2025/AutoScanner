@@ -173,11 +173,11 @@ export default function TransmissionTroubleSection({ onBookNow }: TransmissionTr
 
         {/* Custom Tab Selector */}
         <div className="flex justify-center mb-12" id="trouble-tabs-wrapper">
-          <div className="bg-[#121212] border border-raven-border p-1.5 flex gap-2 rounded-none">
+          <div className="bg-[#121212] border border-raven-border p-1.5 flex flex-col sm:flex-row gap-2 rounded-none w-full sm:w-auto">
             <button
               id="tab-btn-mechanical"
               onClick={() => setActiveTab("mechanical")}
-              className={`px-6 py-3 font-mono text-[10px] font-black uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+              className={`px-4 sm:px-6 py-3 font-mono text-[9px] sm:text-[10px] font-black uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                 activeTab === "mechanical" 
                   ? "bg-raven-red text-white shadow-lg" 
                   : "bg-transparent text-white/50 hover:text-white"
@@ -188,7 +188,7 @@ export default function TransmissionTroubleSection({ onBookNow }: TransmissionTr
             <button
               id="tab-btn-dtc"
               onClick={() => setActiveTab("dtc")}
-              className={`px-6 py-3 font-mono text-[10px] font-black uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+              className={`px-4 sm:px-6 py-3 font-mono text-[9px] sm:text-[10px] font-black uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                 activeTab === "dtc" 
                   ? "bg-raven-red text-white shadow-lg" 
                   : "bg-transparent text-white/50 hover:text-white"
@@ -316,7 +316,7 @@ export default function TransmissionTroubleSection({ onBookNow }: TransmissionTr
               {/* Left Selector Side */}
               <div className="lg:col-span-2 space-y-2">
                 <p className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-3 px-1">Códigos de Diagnóstico (DTC) Comuns</p>
-                <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
                   {dtcCodes.map((dtc) => {
                     const isSelected = selectedCodeId === dtc.code;
                     return (
