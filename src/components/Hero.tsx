@@ -7,6 +7,7 @@ import { motion } from "motion/react";
 import { Gauge, CheckCircle, Shield, ArrowRight, Play, Cpu, Tablet, Activity, Truck } from "lucide-react";
 import { raven3ScannerBase64 } from "../assets/raven3Image";
 import { heroBgBase64 } from "../assets/heroBgImage";
+import CanBusTypewriter from "./CanBusTypewriter";
 
 const raven3ScannerImg = raven3ScannerBase64;
 
@@ -240,7 +241,7 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
               </div>
 
               {/* Terminal Display */}
-              <div className="space-y-2 py-4 font-mono text-xs text-white/80">
+              <div className="space-y-2 py-3 font-mono text-xs text-white/80">
                 <div className="flex justify-between border-b border-raven-border/40 pb-1">
                   <span className="text-white/40 uppercase">HARDWARE:</span>
                   <span className="text-white font-bold">SCANNER AUTOMOTIVO RAVEN 3</span>
@@ -252,6 +253,11 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
                 <div className="flex justify-between border-b border-raven-border/40 pb-1">
                   <span className="text-white/40 uppercase">PRESSÃO E SOLENOIDES:</span>
                   <span className="text-raven-red font-bold">LEITURA DOS SENSORES E PRESSÃO ELETRÔNICA</span>
+                </div>
+
+                {/* Live CAN Bus Typewriter Stream */}
+                <div className="pt-2">
+                  <CanBusTypewriter />
                 </div>
               </div>
 
