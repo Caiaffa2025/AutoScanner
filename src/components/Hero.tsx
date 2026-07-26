@@ -6,6 +6,7 @@
 import { motion } from "motion/react";
 import { Gauge, CheckCircle, Shield, ArrowRight, Play, Cpu, Tablet } from "lucide-react";
 import { raven3ScannerBase64 } from "../assets/raven3Image";
+import { heroBgBase64 } from "../assets/heroBgImage";
 
 const raven3ScannerImg = raven3ScannerBase64;
 
@@ -20,6 +21,19 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
       id="hero"
       className="relative bg-[#0f0f0f] text-white pt-24 pb-16 md:pt-40 md:pb-32 overflow-hidden min-h-[90vh] flex items-center border-b border-raven-border"
     >
+      {/* High-Tech Automotive Diagnostic Background Image */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <img
+          src={heroBgBase64}
+          alt="Automotive diagnostic background"
+          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover object-center opacity-25 filter brightness-90 contrast-125"
+        />
+        {/* Dark Gradients Overlay for crisp readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f0f0f] via-[#0f0f0f]/90 to-[#0f0f0f]/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0f0f0f]/80 via-transparent to-[#0f0f0f]" />
+      </div>
+
       {/* Background Graphic Grid */}
       <div className="absolute inset-0 z-0 opacity-15 pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)] bg-[size:5rem_5rem]" />
