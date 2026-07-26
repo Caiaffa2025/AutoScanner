@@ -366,7 +366,7 @@ export default function SymptomChecker({ onSelectSymptomForScan, onBookNow }: Sy
 
         {/* Cobertura de Falhas do Veículo Callout Component */}
         <div className="mt-16 bg-[#0c0c0c] border border-raven-border p-8 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
-          <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[350px] h-[350px] bg-raven-red/5 rounded-full filter blur-[100px] pointer-events-none" />
+          <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[250px] sm:w-[350px] h-[250px] sm:h-[350px] bg-raven-red/5 rounded-full filter blur-2xl pointer-events-none" />
           <div className="space-y-4 relative z-10 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-raven-red/10 border border-raven-red/20 text-[9px] font-mono tracking-widest font-bold text-raven-red uppercase rounded-none">
               <Sparkles className="w-3.5 h-3.5" />

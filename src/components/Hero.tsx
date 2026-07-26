@@ -20,7 +20,7 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
       {/* Background Graphic Grid */}
       <div className="absolute inset-0 z-0 opacity-15 pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)] bg-[size:5rem_5rem]" />
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-raven-red rounded-full filter blur-[180px] opacity-15" />
+        <div className="absolute top-1/4 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-raven-red rounded-full filter blur-3xl opacity-15" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

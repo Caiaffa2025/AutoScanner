@@ -108,7 +108,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-slate-50 text-slate-900 font-sans min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-slate-950">
+    <div className="bg-[#0f0f0f] text-white font-sans min-h-screen flex flex-col justify-between selection:bg-raven-red selection:text-white overflow-x-hidden">
       
       {/* Dynamic Pop notification toast bar */}
       <div className="fixed bottom-6 right-6 z-50 pointer-events-none max-w-sm w-full">
