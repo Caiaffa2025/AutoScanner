@@ -4,7 +4,7 @@
  */
 
 import { motion } from "motion/react";
-import { Gauge, CheckCircle, Shield, ArrowRight, Play, Cpu, Tablet } from "lucide-react";
+import { Gauge, CheckCircle, Shield, ArrowRight, Play, Cpu, Tablet, Activity, Truck } from "lucide-react";
 import { raven3ScannerBase64 } from "../assets/raven3Image";
 import { heroBgBase64 } from "../assets/heroBgImage";
 
@@ -74,6 +74,53 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
               <p className="text-white/60 text-base sm:text-lg font-medium leading-relaxed max-w-xl">
                 Diagnóstico computadorizado avançado em domicílio com o <strong className="text-white font-bold">Scanner Automotivo Raven 3</strong>. Identificamos e verificamos problemas de trancos, patinação, atrasos de engate e falhas de solenoides com precisão de oficina autorizada.
               </p>
+            </motion.div>
+
+            {/* Technical Certification Badges */}
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="bg-[#141414] border border-raven-border/80 p-2.5 flex items-center gap-2.5 hover:border-raven-red/50 transition-colors">
+                <div className="bg-raven-red/10 border border-raven-red/30 p-1.5 text-raven-red shrink-0">
+                  <Cpu className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-mono font-black uppercase text-white tracking-wider flex items-center gap-1">
+                    <span>CAN BUS</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block"></span>
+                  </div>
+                  <div className="text-[9px] font-mono text-white/50 leading-tight uppercase font-semibold">High Speed Protocol</div>
+                </div>
+              </div>
+
+              <div className="bg-[#141414] border border-raven-border/80 p-2.5 flex items-center gap-2.5 hover:border-raven-red/50 transition-colors">
+                <div className="bg-raven-red/10 border border-raven-red/30 p-1.5 text-raven-red shrink-0">
+                  <Activity className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-mono font-black uppercase text-white tracking-wider flex items-center gap-1">
+                    <span>OBD-II / TCU</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-raven-red inline-block"></span>
+                  </div>
+                  <div className="text-[9px] font-mono text-white/50 leading-tight uppercase font-semibold">Scanner Raven 3</div>
+                </div>
+              </div>
+
+              <div className="bg-[#141414] border border-raven-border/80 p-2.5 flex items-center gap-2.5 hover:border-raven-red/50 transition-colors">
+                <div className="bg-raven-red/10 border border-raven-red/30 p-1.5 text-raven-red shrink-0">
+                  <Truck className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-mono font-black uppercase text-white tracking-wider flex items-center gap-1">
+                    <span>DOMICILIAR</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 inline-block"></span>
+                  </div>
+                  <div className="text-[9px] font-mono text-white/50 leading-tight uppercase font-semibold">Atendimento no Local</div>
+                </div>
+              </div>
             </motion.div>
 
             {/* Quick Benefits Bullet List */}
