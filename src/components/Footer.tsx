@@ -44,7 +44,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
             <div className="flex items-center gap-2 text-[9px] font-mono font-black uppercase tracking-wider text-white/40 bg-[#121212] px-4 py-2 border border-raven-border w-fit">
               <BadgeInfo className="w-4 h-4 text-raven-red" />
-              <span>Concessionária Autorizada</span>
+              <span>Diagnóstico Automotivo Móvel Especializado</span>
             </div>
           </div>
 
