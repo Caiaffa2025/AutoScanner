@@ -4,7 +4,9 @@
  */
 
 import { motion } from "motion/react";
-import { Gauge, CheckCircle, Shield, ArrowRight, Play } from "lucide-react";
+import { Gauge, CheckCircle, Shield, ArrowRight, Play, Cpu, Tablet } from "lucide-react";
+
+const raven3ScannerImg = "/src/assets/images/raven_3_scanner_1785078735960.jpg";
 
 interface HeroProps {
   onCheckSymptoms: () => void;
@@ -26,7 +28,7 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Hero Main Copy */}
-          <div className="flex flex-col space-y-8 lg:col-span-7">
+          <div className="flex flex-col space-y-8 lg:col-span-6">
             <motion.div
               initial={{ opacity: 0, x: -25 }}
               animate={{ opacity: 1, x: 0 }}
@@ -48,14 +50,14 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h1 className="font-display font-black text-3xl sm:text-5xl lg:text-7xl tracking-tighter leading-none uppercase break-words">
+              <h1 className="font-display font-black text-3xl sm:text-5xl lg:text-6xl tracking-tighter leading-none uppercase break-words">
                 Seu câmbio automático sem mistérios com{" "}
                 <span className="text-raven-red glow-red block sm:inline">
                   AUTOSCANNER ONLINE
                 </span>
               </h1>
-              <p className="text-white/60 text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-xl">
-                Diagnóstico computadorizado avançado em domicílio. Identificamos e verificamos problemas de trancos, patinação, atrasos de engate e falhas de solenoides em câmbios automáticos com precisão absoluta.
+              <p className="text-white/60 text-base sm:text-lg font-medium leading-relaxed max-w-xl">
+                Diagnóstico computadorizado avançado em domicílio com o <strong className="text-white font-bold">Scanner Automotivo Raven 3</strong>. Identificamos e verificamos problemas de trancos, patinação, atrasos de engate e falhas de solenoides com precisão de oficina autorizada.
               </p>
             </motion.div>
 
@@ -121,54 +123,78 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
             </motion.div>
           </div>
 
-          {/* Interactive Raven Terminal Preview */}
+          {/* Raven 3 Scanner Image & Interactive Terminal */}
           <motion.div
-            className="w-full h-full flex justify-center items-center lg:col-span-5"
+            className="w-full flex flex-col gap-4 lg:col-span-6"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="relative bg-[#161616] border border-raven-border rounded-none p-4 sm:p-6 shadow-2xl glow-box-red w-full max-w-lg aspect-auto sm:aspect-video flex flex-col justify-between overflow-hidden min-h-[280px]">
+            {/* Raven 3 Image Banner Card */}
+            <div className="relative bg-[#161616] border border-raven-border p-3 sm:p-4 shadow-2xl overflow-hidden group">
+              <div className="absolute top-0 right-0 z-20 bg-raven-red text-white text-[10px] font-mono font-black tracking-widest px-3 py-1 uppercase shadow-md flex items-center gap-1.5">
+                <Tablet className="w-3.5 h-3.5" />
+                <span>Scanner Raven 3 Oficial</span>
+              </div>
+              
+              <div className="relative w-full h-52 sm:h-64 overflow-hidden border border-raven-border/60 bg-[#080808]">
+                <img
+                  src={raven3ScannerImg}
+                  alt="Scanner Automotivo Raven 3 em uso para diagnóstico de câmbio"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-105 contrast-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#161616] via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-3 left-3 right-3 flex justify-between items-end z-10">
+                  <div className="bg-[#0f0f0f]/90 backdrop-blur-md border border-raven-border px-3 py-1.5 text-[10px] font-mono text-white/90">
+                    <span className="text-raven-red font-bold uppercase">EQUIPAMENTO: </span>
+                    <span className="font-bold">SCANNER AUTOMOTIVO RAVEN 3</span>
+                  </div>
+                  <div className="bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-2.5 py-1 text-[9px] font-mono font-bold tracking-widest uppercase">
+                    CAN BUS / OBD-II READY
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Interactive Terminal */}
+            <div className="relative bg-[#161616] border border-raven-border p-4 sm:p-5 shadow-2xl glow-box-red w-full flex flex-col justify-between overflow-hidden">
               <div className="absolute top-0 right-0 p-8 w-48 h-48 bg-raven-red/5 rounded-full filter blur-xl pointer-events-none" />
 
               {/* Terminal Head */}
-              <div className="flex items-center justify-between border-b border-raven-border pb-4">
+              <div className="flex items-center justify-between border-b border-raven-border pb-3">
                 <div className="flex items-center gap-2">
                   <div className="flex gap-1.5">
                     <span className="w-2.5 h-2.5 rounded-none bg-raven-red block"></span>
                     <span className="w-2.5 h-2.5 rounded-none bg-white/40 block"></span>
                     <span className="w-2.5 h-2.5 rounded-none bg-white/20 block"></span>
                   </div>
-                  <span className="text-[11px] font-mono text-white/50 font-bold uppercase tracking-wider">TCU_DIAG_X.4_SCAN</span>
+                  <span className="text-[11px] font-mono text-white/50 font-bold uppercase tracking-wider">RAVEN_3_TCU_DIAG_X.4</span>
                 </div>
                 <div className="flex items-center gap-1.5 bg-[#0f0f0f] border border-raven-border py-1 px-3 rounded-none">
                   <span className="w-2 h-2 bg-raven-red rounded-full animate-ping"></span>
-                  <span className="text-[10px] font-mono text-raven-red font-bold tracking-widest uppercase">ONLINE</span>
+                  <span className="text-[10px] font-mono text-raven-red font-bold tracking-widest uppercase">SCANNER ATIVO</span>
                 </div>
               </div>
 
               {/* Terminal Display */}
-              <div className="space-y-3 py-6 font-mono text-xs text-white/80">
-                <div className="flex justify-between border-b border-raven-border/40 pb-1.5">
-                  <span className="text-white/40 uppercase">SISTEMA ACESSADO:</span>
+              <div className="space-y-2 py-4 font-mono text-xs text-white/80">
+                <div className="flex justify-between border-b border-raven-border/40 pb-1">
+                  <span className="text-white/40 uppercase">HARDWARE:</span>
+                  <span className="text-white font-bold">SCANNER AUTOMOTIVO RAVEN 3</span>
+                </div>
+                <div className="flex justify-between border-b border-raven-border/40 pb-1">
+                  <span className="text-white/40 uppercase">SISTEMA CONECTADO:</span>
                   <span className="text-white font-bold">TRANSMISSION CONTROL MODULE (TCM/TCU)</span>
                 </div>
-                <div className="flex justify-between border-b border-raven-border/40 pb-1.5">
-                  <span className="text-white/40 uppercase">EMBREAGEM / SOLENOIDE:</span>
-                  <span className="text-raven-red font-bold">LEITURA DE PRESSÃO HIDRÁULICA</span>
-                </div>
-                <div className="flex justify-between border-b border-raven-border/40 pb-1.5">
-                  <span className="text-white/40 uppercase">ALERTA EM MEMÓRIA:</span>
-                  <span className="text-white font-bold">DTC P0700 (FALHA NO SOLENOIDE)</span>
-                </div>
-                <div className="flex justify-between border-b border-raven-border/40 pb-1.5">
-                  <span className="text-white/40 uppercase">FLUIDO DE TRANSMISSÃO:</span>
-                  <span className="text-white font-bold">85°C (ESTÁVEL OPERACIONAL)</span>
+                <div className="flex justify-between border-b border-raven-border/40 pb-1">
+                  <span className="text-white/40 uppercase">PRESSÃO E SOLENOIDES:</span>
+                  <span className="text-raven-red font-bold">LEITURA DOS SENSORES E PRESSÃO ELETRÔNICA</span>
                 </div>
               </div>
 
               {/* Live Waveform graphic representation */}
-              <div className="flex items-end gap-1 h-14 w-full bg-[#080808] border border-raven-border rounded-none p-3 relative overflow-hidden">
+              <div className="flex items-end gap-1 h-12 w-full bg-[#080808] border border-raven-border rounded-none p-2.5 relative overflow-hidden">
                 <svg className="absolute inset-0 w-full h-full text-raven-red/25" preserveAspectRatio="none">
                   <path
                     d="M 0 30 Q 30 10 60 40 T 120 20 T 180 35 T 240 15 T 300 25 T 360 40 T 420 10 T 480 30 L 500 30"
@@ -177,12 +203,9 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
                     strokeWidth="1.5"
                   />
                 </svg>
-                <div className="absolute top-1 right-2 text-[8px] text-white/40 font-mono tracking-wider uppercase">
-                  TELEMETRIA DO SOLENOIDE DE PRESSÃO A (bar)
-                </div>
                 <div className="flex items-center justify-between w-full relative z-10 text-[9px] font-mono font-bold text-raven-red uppercase">
-                  <span>CAN BUS SPEED: HIGH</span>
-                  <span>PRONTO PARA RE-APRENDIZO DE SINCRO</span>
+                  <span>TELEMETRIA RAVEN 3: ATIVA</span>
+                  <span>CAN BUS HIGH SPEED</span>
                 </div>
               </div>
             </div>
@@ -192,3 +215,4 @@ export default function Hero({ onCheckSymptoms, onBookNow }: HeroProps) {
     </section>
   );
 }
+
