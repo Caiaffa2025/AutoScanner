@@ -120,7 +120,12 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         {/* Bottom copyright segment */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-white/35 font-mono uppercase font-black tracking-wide">
-          <p>© 2026 AUTOSCANNERONLINE. Todos os Direitos Reservados.</p>
+          <div>
+            <p>© 2026 AUTOSCANNERONLINE. Todos os Direitos Reservados.</p>
+            <p className="text-[9px] text-white/25 mt-0.5 normal-case font-semibold tracking-normal">
+              Agencia Stc Mobile / Sydney Caiaffa
+            </p>
+          </div>
           <div className="flex items-center gap-1.5 text-[9px] text-white/20">
             <ShieldAlert className="w-3.5 h-3.5 text-raven-red" />
             <span>As marcas e logos das montadoras pertencem aos seus fabricantes.</span>
