@@ -122,7 +122,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-white/35 font-mono uppercase font-black tracking-wide">
           <div>
             <p>© 2026 AUTOSCANNERONLINE. Todos os Direitos Reservados.</p>
-            <p className="text-[9px] text-white/25 mt-0.5 normal-case font-semibold tracking-normal">
+            <p className="text-[10px] text-yellow-400 mt-1 normal-case font-bold tracking-wider uppercase">
               Agencia Stc Mobile / Sydney Caiaffa
             </p>
           </div>
