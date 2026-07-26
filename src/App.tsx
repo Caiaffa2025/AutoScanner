@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -16,10 +16,24 @@ import PricingPackages from "./components/PricingPackages";
 import BookingForm from "./components/BookingForm";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
+import AgencyModal from "./components/AgencyModal";
 
 import { AlertCircle, CheckCircle, Sparkles, X } from "lucide-react";
 
 export default function App() {
+  const [isAgencyModalOpen, setIsAgencyModalOpen] = useState(false);
+
+  // Auto-open modal on initial landing page load for 6 seconds
+  useEffect(() => {
+    // Open immediately when page loads
+    setIsAgencyModalOpen(true);
+
+    const timer = setTimeout(() => {
+      setIsAgencyModalOpen(false);
+    }, 6000);
+
+    return () => clearTimeout(timer);
+  }, []);
   const [preFillBookingData, setPreFillBookingData] = useState<{
     brand?: string;
     model?: string;
@@ -185,7 +199,16 @@ export default function App() {
       </main>
 
       {/* Global Footer */}
-      <Footer onNavigate={handleScrollToSection} />
+      <Footer
+        onNavigate={handleScrollToSection}
+        onOpenAgencyModal={() => setIsAgencyModalOpen(true)}
+      />
+
+      {/* Agencia STC Mobile Popup Modal */}
+      <AgencyModal
+        isOpen={isAgencyModalOpen}
+        onClose={() => setIsAgencyModalOpen(false)}
+      />
 
     </div>
   );

@@ -7,9 +7,10 @@ import { Wrench, Phone, MapPin, Mail, ShieldAlert, BadgeInfo } from "lucide-reac
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
+  onOpenAgencyModal?: () => void;
 }
 
-export default function Footer({ onNavigate }: FooterProps) {
+export default function Footer({ onNavigate, onOpenAgencyModal }: FooterProps) {
   return (
     <footer className="bg-[#080808] text-white/50 py-16 border-t border-raven-border font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -122,9 +123,13 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-white/35 font-mono uppercase font-black tracking-wide">
           <div>
             <p>© 2026 AUTOSCANNERONLINE. Todos os Direitos Reservados.</p>
-            <p className="text-[10px] text-yellow-400 mt-1 normal-case font-bold tracking-wider uppercase">
-              Agencia Stc Mobile / Sydney Caiaffa
-            </p>
+            <button
+              onClick={onOpenAgencyModal}
+              className="text-[10px] text-yellow-400 hover:text-yellow-300 mt-1 normal-case font-bold tracking-wider uppercase flex items-center gap-1 cursor-pointer transition-all hover:underline"
+              title="Clique para ver informações do projeto"
+            >
+              <span>Agencia Stc Mobile / Sydney Caiaffa</span>
+            </button>
           </div>
           <div className="flex items-center gap-1.5 text-[9px] text-white/20">
             <ShieldAlert className="w-3.5 h-3.5 text-raven-red" />
